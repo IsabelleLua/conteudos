@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    line-height: 1.1;
+    min-height: 100vh;
+}
+
+.premium-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(59, 89, 152, 0.2), transparent);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.profile-header {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+    height: 50vh;
+    min-height: 400px;
+}
+
+.cover-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)),
+                      url('teste3.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.profile-main {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #3b5998;
+    box-shadow: 0 0 30px rgba(59, 89, 152, 0.5);
+    margin-bottom: -20px;
+}
+
+.premium-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #3b5998, #8b9dc3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.profile-details h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.username {
+    color: #8b9dc3;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.bio {
+    max-width: 500px;
+    color: #dfe3ee;
+    font-size: 18px;
+}
+
+.content-preview {
+    position: relative;
+    padding: 40px;
+    background: #0a0a0a;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.cta-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.cta-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.highlight-text {
+    color: #8b9dc3;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #dfe3ee;
+}
+
+.feature-icon {
+    font-size: 24px;
+}
+
+.facebook-login {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #3b5998;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.facebook-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 89, 152, 0.4);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 40px;
+    min-width: 300px;
+}
+
+.fb-icon {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.login-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20%, 100% {
+        left: 200%;
+    }
+}
+
+.trust-text {
+    color: #8b9dc3;
+    font-size: 14px;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.preview-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lock-icon {
+    font-size: 32px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    .profile-main {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 0;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .preview-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .button-content {
+        min-width: auto;
+        padding: 15px 30px;
+    }
+
+    .login-text {
+        font-size: 18px;
+    }
+}
+
